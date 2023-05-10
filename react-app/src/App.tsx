@@ -1,7 +1,8 @@
 import { useState } from "react";
-import ExpenseList from "./expense-tracker/components/ExpenseList";
-import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
+import Title from "./expense-tracker/components/Title";
 import ExpenseForm from "./expense-tracker/components/ExpenseForm";
+import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
+import ExpenseList from "./expense-tracker/components/ExpenseList";
 import categories from "./expense-tracker/categories";
 
 function App() {
@@ -21,7 +22,10 @@ function App() {
   return (
     <>
       <div>
-        <div className="mb-5">
+        <div className="container -fluid mt-3">
+          <Title />
+        </div>
+        <div className="m-5">
           <ExpenseForm
             onSubmit={(newExpense) =>
               setExpenses([
