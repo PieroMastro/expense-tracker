@@ -16,24 +16,9 @@ Install dependancies:
 $ npm install
 </p>
 
+<p>
 Run it:
 
 $ npm run dev
+</p>
 </div>
-<p>
-Open a the terminal and select the react-app folder by typing:
-
-$ cd react-app
-</p>
-
-<p>
-Install dependancies:
-
-$ npm install
-</p>
-
-<p>
-Run it:
-
-$ npm run dev
-</p>
