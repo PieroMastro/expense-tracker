@@ -4,6 +4,7 @@
 </div>
 
 <div>
+    <h3><i>Instructions:<i><h3>
 <p>
 Open a the terminal and select the react-app folder by typing:
 
