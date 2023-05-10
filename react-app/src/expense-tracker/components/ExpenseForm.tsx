@@ -4,9 +4,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import categories from "../categories";
 
 const schema = z.object({
-  description: z.string().min(3).max(50),
-  amount: z.number().min(0.01).max(100_000),
-  category: z.enum(categories),
+  description: z
+    .string()
+    .min(3, { message: "Description should be at least 3 characters." })
+    .max(50),
+  amount: z
+    .number({ invalid_type_error: "Amount is required." })
+    .min(0.01, { message: "" })
+    .max(100_000),
+  category: z.enum(categories, {
+    errorMap: () => ({ message: "Category is required." }),
+  }),
 });
 
 type ExpenseFormData = z.infer<typeof schema>;
@@ -37,7 +45,11 @@ const ExpenseForm = () => {
         <label htmlFor="amount" className="form-label">
           Amount
         </label>
-        <input {...register("amount")} id="amount" className="form-control" />
+        <input
+          {...register("amount", { valueAsNumber: true })}
+          id="amount"
+          className="form-control"
+        />
         {errors.amount && (
           <p className="text-danger">{errors.amount.message}</p>
         )}
