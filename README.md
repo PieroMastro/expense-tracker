@@ -4,22 +4,24 @@
 </div>
 
 <div>
-    <h3><i>Instructions:<i><h3>
+    <h3><em>Instructions:</em><h3>
+</div>
+        
 <p>
 Open a the terminal and select the react-app folder by typing:
-
+    
 $ cd react-app
 </p>
 
 <p>
 Install dependancies:
-
+    
 $ npm install
 </p>
 
 <p>
 Run it:
-
+    
 $ npm run dev
 </p>
-</div>
+
